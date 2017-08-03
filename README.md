@@ -60,7 +60,7 @@ systemctl start flanneld
 systemctl status flanneld
 ```
 
-### 安装docker
+### 4、安装docker
 ```
 yum install docker -y
 ```

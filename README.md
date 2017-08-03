@@ -1,4 +1,4 @@
-# kubernetes步骤
+# kubernetes 前期步骤
 ### 1、 centos7 升级4.4内核
 1、导入key
 ```
@@ -69,3 +69,5 @@ yum install docker -y
 systemctl daemon-reload
 systemctl start docker
 ```
+
+后面的kubernetes集群步骤请参考https://github.com/rootsongjc/kubernetes-handbook

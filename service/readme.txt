@@ -1,0 +1,1 @@
+将里面的master ip改为对应的自己集群的master ip

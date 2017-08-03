@@ -48,4 +48,4 @@ spec:
         args:
         - /nginx-ingress-controller
         - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
-        - --apiserver-host=http://10.15.184.50:8080
+        - --apiserver-host=http://10.15.184.50:8080 ##此处是api master的地址

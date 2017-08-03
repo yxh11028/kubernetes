@@ -35,3 +35,37 @@ uname -r
   "live-restore": true
 }
 ```
+
+### 3、部署flannel
+```
+yum install -y flannel
+```
+在etcd服务器执行
+```
+etcdctl mkdir /kube-centos/network
+etcdctl mk /kube-centos/network/config "{ \"Network\": \"172.16.0.0/16\", \"SubnetLen\": 24, \"Backend\": { \"Type\": \"host-gw\" } }"
+```
+修改flannel配置文件
+
+```
+FLANNEL_ETCD="http://10.15.206.107:2379,http://10.15.206.108:2379,http://10.15.206.109:2379"
+FLANNEL_ETCD_KEY="/kube-centos/network"
+```
+
+**启动flannel**
+
+```shell
+systemctl daemon-reload
+systemctl start flanneld
+systemctl status flanneld
+```
+
+### 安装docker
+```
+yum install docker -y
+```
+**启动docker**
+```shell
+systemctl daemon-reload
+systemctl start docker
+```

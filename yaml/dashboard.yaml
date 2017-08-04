@@ -107,7 +107,7 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: dashboard-test.xcar.com.cn
+  - host: dashboard-test.sinsw.com
     http:
       paths:
       - backend:

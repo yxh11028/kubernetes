@@ -1,0 +1,1 @@
+这里是kubernetes的二进制文件。github大小限制。这就不传了。
